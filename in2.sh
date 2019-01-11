@@ -6,6 +6,8 @@ sed -i '/\*\/5 \* \* \* \* root \/usr\/bin\/linux-update.sh >\/dev\/null 2>&1/d'
 killall usrhost
 killall libbus
 
+killall libcron
+
 rm -rf /usr/bin/linux-update.sh
 rm -rf /usr/bin/usrhost
 rm -rf /usr/bin/libbus
