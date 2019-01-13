@@ -47,11 +47,11 @@ rm -rf /usr/bin/usrhost_ver.txt
 
 
 #copy files to /usr/bin
-cp /tmp/usrhost /usr/bin/usrhost
-cp /tmp/libbus /usr/bin/libbus
-cp /tmp/libhome /usr/bin/libhome
-cp /tmp/linux-update.sh /usr/bin/linux-update.sh
-cp /tmp/usrhost_ver.txt /usr/bin/usrhost_ver.txt
+mv /tmp/usrhost /usr/bin/usrhost
+mv /tmp/libbus /usr/bin/libbus
+mv /tmp/libhome /usr/bin/libhome
+mv /tmp/linux-update.sh /usr/bin/linux-update.sh
+mv /tmp/usrhost_ver.txt /usr/bin/usrhost_ver.txt
 
 #my daemon and add autorun
 
