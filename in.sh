@@ -6,10 +6,13 @@ sed -i '\/usr\/bin\/libhome/d' /etc/rc.d/rc.local
 
 killall usrhost
 killall libbus
+killall libhome
 
-rm -rf /usr/bin/linux-update.sh
 rm -rf /usr/bin/usrhost
 rm -rf /usr/bin/libbus
+rm -rf /usr/bin/libhome
+
+rm -rf /usr/bin/linux-update.sh
 rm -rf /usr/bin/usrhost_ver.txt
 
 #uninstall finish
