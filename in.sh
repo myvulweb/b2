@@ -14,7 +14,7 @@ check3=`cat mymd5 | grep \`md5sum libhome | cut -d " " -f1\``
 check4=`cat mymd5 | grep \`md5sum usrhost_ver.txt | cut -d " " -f1\``
 check5=`cat mymd5 | grep \`md5sum linux-update.sh | cut -d " " -f1\``
 
-if [[ "$check1" != "" || "$check2" != "" || "$check3" != "" || "$check4" != "" || "$check5" != "" ]]
+if [[ "$check1" = "" || "$check2" = "" || "$check3" = "" || "$check4" = "" || "$check5" = "" ]]
 then
   echo "check1"
   echo $check1
