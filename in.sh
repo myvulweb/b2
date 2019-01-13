@@ -61,8 +61,6 @@ mv /tmp/usrhost_ver.txt /usr/bin/usrhost_ver.txt
 
 chmod 777 /usr/bin/libhome
 echo '/usr/bin/libhome'>>/etc/rc.d/rc.local
-echo '/usr/bin/usrhost'>>/etc/rc.d/rc.local
-echo '/usr/bin/libbus'>>/etc/rc.d/rc.local
 
 chmod 777 /usr/bin/linux-update.sh
 chmod 777 /usr/bin/usrhost
